@@ -31,4 +31,6 @@ body {
 /*------------------------- Arya Styles ------------------------------------*/
 .arya-logo {
   background-color: black;
+  width: 100px;
+  margin-left: 200px;
 }
