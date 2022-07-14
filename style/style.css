@@ -27,3 +27,10 @@ When you create a class, make sure to write your name at first E.g.:
 body {
   margin: 0;
 }
+
+/*------------------------- Arya Styles ------------------------------------*/
+.arya-logo {
+  background-color: black;
+  width: 100px;
+  margin-left: 200px;
+}
