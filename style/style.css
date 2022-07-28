@@ -24,15 +24,170 @@ When you create a class, make sure to write your name at first E.g.:
 
 
 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
 }
 
 /*------------------------- Arya Styles ------------------------------------*/
+.arya-header {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  height: 700px;
+  position: relative;
+}
+.arya-whitePatern {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  height: 700px;
+}
+.arya-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-color: transparent;
+  height: 60px;
+}
+.arya-links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.arya-links a {
+  text-decoration: none;
+  color: white;
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: 500;
+}
+.arya-links a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.arya-signInBtn {
+  width: 85px;
+  margin: 190px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 17px;
+  padding: 8px;
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: 500;
+}
+.arya-signInBtn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
 .arya-logo {
-  background-color: black;
-  width: 100px;
-  margin-left: 200px;
+  width: 60px;
+  margin-left: 175px;
+  margin-right: 200px;
+}
+.arya-logo:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.arya-intro > .arya-intro-left {
+  position: absolute;
+  top: 145px;
+  left: 200px;
+  font-family: "Inter";
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.arya-intro > .arya-intro-right {
+  position: absolute;
+  top: 300px;
+}
+.arya-sessions {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+.arya-sessions a {
+  text-decoration: none;
+  color: white;
+}
+.arya-sessions a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.arya-intro-title {
+  font-size: 87px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.arya-desc {
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 6px;
+  opacity: 0.6;
+}
+.arya-intro-btns {
+  margin-top: 10px;
+}
+.arya-intro-btns :first-child {
+  background-color: #0b2743;
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 17px;
+  padding: 7px 13px;
+  font-family: "Inter";
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.arya-intro-btns :nth-child(2) {
+  background-color: transparent;
+  color: #0b2743;
+  border: none;
+  border-radius: 17px;
+  padding: 6px 12px;
+  font-family: "Inter";
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.arya-intro-btns :first-child:hover {
+  background-color: rgb(10, 37, 64, 0.5);
+  cursor: pointer;
+}
+.arya-intro-btns :nth-child(2):hover {
+  color: rgb(10, 37, 64, 0.5);
+  cursor: pointer;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /*------------------------- Aiman Styles ------------------------------------*/
