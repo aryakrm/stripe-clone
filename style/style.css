@@ -178,6 +178,13 @@ body {
   cursor: pointer;
 }
 
+.mob {
+  width: 850px;
+  position: absolute;
+  top: -200px;
+  left: 590px;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
