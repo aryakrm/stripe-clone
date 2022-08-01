@@ -178,6 +178,35 @@ body {
   cursor: pointer;
 }
 
+.arya-mob {
+  width: 850px;
+  position: absolute;
+  top: -200px;
+  left: 590px;
+}
+.arya-logos {
+  margin-top: 100px;
+}
+
+.arya-logos-top,
+.arya-logos-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 150px;
+  align-items: center;
+  margin: 50px 0;
+}
+.arya-logos-bottom {
+  gap: 170px;
+}
+.arya-logoSvg {
+  width: 120px;
+}
+.arya-lyft {
+  width: 60px;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
