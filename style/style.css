@@ -178,7 +178,7 @@ body {
   cursor: pointer;
 }
 
-.mob {
+.arya-mob {
   width: 850px;
   position: absolute;
   top: -200px;
@@ -200,10 +200,10 @@ body {
 .arya-logos-bottom {
   gap: 170px;
 }
-.logoSvg {
+.arya-logoSvg {
   width: 120px;
 }
-.lyft {
+.arya-lyft {
   width: 60px;
 }
 
