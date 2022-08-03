@@ -1,0 +1,504 @@
+:root {
+  font-size: 62.5%;
+  --sec3-font-family: "Inter";
+  --sec3-white-color: #fff;
+  --sec3-purple-color: #5f5bfe;
+  --sec3-dark-color: #002640;
+  --sec3-text-color: #3b5566;
+  --sec3-background-color: #f5f9fc;
+  --sec3-transition-duration-normal: 300ms;
+  --sec4-blue-color: #00d7ff;
+  --sec4-text-color: #a8becc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--sec3-background-color);
+}
+
+/*------------------------- Arya Styles ------------------------------------*/
+.arya-header {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+  height: 700px;
+  position: relative;
+}
+.arya-whitePatern {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  height: 700px;
+}
+.arya-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-color: transparent;
+  height: 60px;
+}
+.arya-links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+.arya-links a {
+  text-decoration: none;
+  color: white;
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: 500;
+}
+.arya-links a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.arya-signInBtn {
+  width: 85px;
+  margin: 190px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 17px;
+  padding: 8px;
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: 500;
+}
+.arya-signInBtn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.arya-logo {
+  width: 60px;
+  margin-left: 175px;
+  margin-right: 200px;
+}
+.arya-logo:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.arya-intro > .arya-intro-left {
+  position: absolute;
+  top: 145px;
+  left: 200px;
+  font-family: "Inter";
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.arya-intro > .arya-intro-right {
+  position: absolute;
+  top: 300px;
+}
+.arya-sessions {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+.arya-sessions a {
+  text-decoration: none;
+  color: white;
+}
+.arya-sessions a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.arya-intro-title {
+  font-size: 87px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.arya-desc {
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 6px;
+  opacity: 0.6;
+}
+.arya-intro-btns {
+  margin-top: 10px;
+}
+.arya-intro-btns :first-child {
+  background-color: #0b2743;
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 17px;
+  padding: 7px 13px;
+  font-family: "Inter";
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.arya-intro-btns :nth-child(2) {
+  background-color: transparent;
+  color: #0b2743;
+  border: none;
+  border-radius: 17px;
+  padding: 6px 12px;
+  font-family: "Inter";
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.arya-intro-btns :first-child:hover {
+  background-color: rgb(10, 37, 64, 0.5);
+  cursor: pointer;
+}
+.arya-intro-btns :nth-child(2):hover {
+  color: rgb(10, 37, 64, 0.5);
+  cursor: pointer;
+}
+
+.arya-mob {
+  width: 850px;
+  position: absolute;
+  top: -200px;
+  left: 590px;
+}
+.arya-logos {
+  margin-top: 100px;
+}
+
+.arya-logos-top,
+.arya-logos-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 150px;
+  align-items: center;
+  margin: 50px 0;
+}
+.arya-logos-bottom {
+  gap: 170px;
+}
+.arya-logoSvg {
+  width: 120px;
+}
+.arya-lyft {
+  width: 60px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*------------------------- Aiman Styles ------------------------------------*/
+/*------------------------- Section   3  ------------------------------------*/
+:is(.sec3-section3) {
+  background-color: var(--sec3-background-color);
+  padding: 0;
+  margin: 0;
+}
+
+.sec3-par-containers-wrapper {
+  font-family: var(--sec3-font-family);
+  font-size: 2rem;
+  position: relative;
+  margin: auto;
+  padding: 5rem 3rem;
+}
+
+.sec3-uni {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--sec3-purple-color);
+}
+
+.sec3-par-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sec3-par-container--parit {
+  color: var(--sec3-purple-color);
+  font-weight: 400;
+}
+
+.sec3-par-container__header {
+  margin: 2rem 0;
+  color: var(--sec3-dark-color);
+  max-width: 30ch;
+}
+
+.sec3-par-container__paragraph {
+  font-size: 1.8rem;
+  max-width: 40ch;
+  line-height: 1.5;
+  color: var(--sec3-text-color);
+}
+
+.sec3-par-container__paragraph span a {
+  font-weight: 500;
+  color: var(--sec3-purple-color);
+  transition-duration: var(--sec3-transition-duration-normal);
+}
+
+.sec3-par-container__paragraph span a:hover {
+  cursor: pointer;
+  color: var(--sec3-dark-color);
+}
+
+.sec3-button-container {
+  margin: 3rem 0;
+}
+
+.sec3-button-container > button {
+  position: relative;
+  padding: 0.8rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--sec3-font-family);
+  background-color: var(--sec3-purple-color);
+  color: var(--sec3-white-color);
+  border: none;
+  border-radius: 10rem;
+  transition-duration: var(--sec3-transition-duration-normal);
+}
+
+.sec3-button-container > button:hover {
+  cursor: pointer;
+  background-color: var(--sec3-dark-color);
+}
+
+/* 
+TODO: build the skew frame and deploy it on the buttons
+*/
+
+.sec3-button-container > button:hover::after {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  content: "";
+  animation-name: arrow;
+  animation-duration: 50ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+  0% {
+    content: ">";
+    transform: translate(-40%);
+  }
+
+  100% {
+    content: "->";
+    transform: translateX(0%);
+  }
+}
+
+/* This wrapper contain the divs of images */
+.sec3-img-containers-wrapper {
+  /* in order to get the shape we want with images we are going to use grid so no matter how big the screen is or small, the view will be the same, and if it's small the overflow will be hidden */
+  display: flex;
+  /* in order to make the pictures hidden the same as the website when the screen size gets smaller I used overflow */
+  overflow: hidden;
+}
+/* Block Modifier for containers (divs) of images */
+.sec3-img-container {
+  width: fit-content;
+  height: fit-content;
+}
+/* Element Modifier for images */
+.sec3-img-container--imgit {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 1rem;
+}
+/* images propreties here, min-width/height = max-width/height - 5rem */
+.sec3-img-container--imgit__visa {
+  max-width: 35rem;
+  min-width: 30rem;
+  max-height: 26.8rem;
+  min-height: 20.8rem;
+}
+
+.sec3-img-container--imgit__invoice {
+  max-width: 64.6rem;
+  min-width: 49.6rem;
+  max-height: 54.8rem;
+  min-height: 39.8rem;
+}
+
+.sec3-img-container--imgit__payment_terminal {
+  max-width: 30rem;
+  min-width: 20rem;
+  max-height: 45rem;
+  min-height: 35rem;
+  border-radius: 3rem;
+}
+
+.sec3-img-container--imgit__phone {
+  max-width: 35rem;
+  min-width: 20rem;
+  max-height: 50rem;
+  min-height: 35rem;
+  border-radius: 3rem;
+}
+
+.sec3-img-container--imgit__fraud {
+  max-width: 84.4rem;
+  max-height: 59.3rem;
+}
+/* images propreties ends here */
+/* Section3 ends here */
+
+/*------------------------- Section   4  ------------------------------------*/
+
+.section4 {
+  padding-top: 10vh;
+  background-color: var(--sec3-dark-color);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  margin-top: -10%;
+  max-height: fit-content;
+  max-width: 100%;
+}
+
+.sec4-uni {
+  color: var(--sec4-blue-color);
+}
+
+.sec4-containers-wrapper {
+  max-width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  font-size: 2rem;
+  padding: 12rem 3rem;
+  font-family: var(--sec3-font-family);
+}
+
+.sec4-container-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sec4-container-main__header {
+  color: var(--sec3-white-color);
+  max-width: 40ch;
+}
+
+.sec4-container-main__paragraph {
+  color: var(--sec4-text-color);
+}
+
+.sec4-main-button > button {
+  position: relative;
+  padding: 0.8rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--sec3-font-family);
+  background-color: var(--sec4-blue-color);
+  color: var(--sec3-dark-color);
+  border: none;
+  border-radius: 10rem;
+  transition-duration: var(--sec3-transition-duration-normal);
+}
+
+.sec4-main-button > button:hover {
+  cursor: pointer;
+  background-color: var(--sec3-background-color);
+}
+
+.sec4-main-button > button:hover::after {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  content: "";
+  animation-name: arrow;
+  animation-duration: 50ms;
+  animation-fill-mode: forwards;
+}
+
+.sec4-container-sib {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sec4-terminal-animation {
+}
+
+.sec4-container-sib__header h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--sec3-white-color);
+}
+
+.sec4-container-sib__paragraph {
+  font-size: 1.5rem;
+  color: var(--sec4-text-color);
+}
+
+.sec-sib-button > button {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--sec3-font-family);
+  background-color: transparent;
+  color: var(--sec4-blue-color);
+  border: none;
+  border-radius: 10rem;
+  transition-duration: var(--sec3-transition-duration-normal);
+}
+
+.sec-sib-button > button:hover {
+  cursor: pointer;
+  color: var(--sec3-white-color);
+}
+
+.sec-sib-button > button:hover::after {
+  position: absolute;
+  right: -2.5rem;
+  content: "";
+  animation-name: arrow;
+  animation-duration: 50ms;
+  animation-fill-mode: forwards;
+}
+
+.sec4-img-container {
+  width: fit-content;
+  height: fit-content;
+}
+
+.sec4-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+/* Section 4 Ends here */
+
+/*------------------------- Musa Styles ------------------------------------*/
+
+/*------------------------- Munther Styles ---------------------------------*/
+
+/*------------------------- Ziad Styles ------------------------------------*/
