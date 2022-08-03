@@ -1,3 +1,7 @@
+:root {
+  font-size: 62.5%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -193,17 +197,21 @@
 /*------------------------- Aiman Styles ------------------------------------*/
 /*------------------------- Section   3  ------------------------------------*/
 /* container refers to divs */
-:is(.aiman-section3, .aiman-container) {
-  font-size: 62.5%;
+:is(.aiman-section3, .aiman-section3 > *) {
+  font-family: "Isnter";
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
 .aiman-par-containers-wrapper {
+  position: relative;
 }
 
 .aiman-par-container {
+  display: flex;
+}
+
+.aiman-par-container--parit {
 }
 
 /* This wrapper contain the divs of images */
@@ -216,7 +224,6 @@
 }
 /* Block Modifier for containers (divs) of images */
 .aiman-img-container {
-  display: block;
   width: fit-content;
   height: fit-content;
 }
@@ -225,38 +232,42 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
+  border-radius: 1rem;
 }
 /* images propreties here, min-width/height = max-width/height - 5rem */
 .aiman-img-container--imgit__visa {
-  max-width: 20rem;
-  min-width: 15rem;
-  max-height: 11.8rem;
-  min-height: 6.8rem;
-  border-radius: 1rem;
+  max-width: 35rem;
+  min-width: 30rem;
+  max-height: 26.8rem;
+  min-height: 20.8rem;
 }
 
 .aiman-img-container--imgit__invoice {
-  max-width: 34.6rem;
-  min-width: 29.6rem;
-  max-height: 24.8rem;
-  min-height: 19.8rem;
-  border-radius: 1rem;
+  max-width: 64.6rem;
+  min-width: 49.6rem;
+  max-height: 54.8rem;
+  min-height: 39.8rem;
 }
 
 .aiman-img-container--imgit__payment_terminal {
-  max-width: 15rem;
-  min-width: 10rem;
-  max-height: 30rem;
-  min-height: 25rem;
-  border-radius: 2rem;
+  max-width: 30rem;
+  min-width: 20rem;
+  max-height: 45rem;
+  min-height: 35rem;
+  border-radius: 3rem;
 }
 
 .aiman-img-container--imgit__phone {
-  max-width: 15rem;
-  min-width: 10rem;
-  max-height: 30rem;
-  min-height: 25rem;
-  border-radius: 2rem;
+  max-width: 35rem;
+  min-width: 20rem;
+  max-height: 50rem;
+  min-height: 35rem;
+  border-radius: 3rem;
+}
+
+.aiman-img-container--imgit__fraud {
+  max-width: 84.4rem;
+  max-height: 59.3rem;
 }
 /* images propreties ends here */
 
