@@ -191,52 +191,74 @@
 }
 
 /*------------------------- Aiman Styles ------------------------------------*/
+/*------------------------- Section   3  ------------------------------------*/
+/* container refers to divs */
 :is(.aiman-section3, .aiman-container) {
   font-size: 62.5%;
-  padding: 2rem;
+  padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.aiman-img-containers-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+.aiman-par-containers-wrapper {
 }
 
+.aiman-par-container {
+}
+
+/* This wrapper contain the divs of images */
+.aiman-img-containers-wrapper {
+  /* in order to get the shape we want with images we are going to use grid so no matter how big the screen is or small, the view will be the same, and if it's small the overflow will be hidden */
+  display: flex;
+  /* in order to make the pictures hidden the same as the website when the screen size gets smaller I used overflow */
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+/* Block Modifier for containers (divs) of images */
 .aiman-img-container {
-  /* flex-grow: 1; */
   display: block;
   width: fit-content;
   height: fit-content;
 }
-
+/* Element Modifier for images */
 .aiman-img-container--imgit {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
-
+/* images propreties here, min-width/height = max-width/height - 5rem */
 .aiman-img-container--imgit__visa {
-  width: 20rem;
-  height: 11.8rem;
+  max-width: 20rem;
+  min-width: 15rem;
+  max-height: 11.8rem;
+  min-height: 6.8rem;
   border-radius: 1rem;
 }
 
 .aiman-img-container--imgit__invoice {
+  max-width: 34.6rem;
+  min-width: 29.6rem;
+  max-height: 24.8rem;
+  min-height: 19.8rem;
   border-radius: 1rem;
 }
 
 .aiman-img-container--imgit__payment_terminal {
-  width: 15rem;
-  height: 30rem;
+  max-width: 15rem;
+  min-width: 10rem;
+  max-height: 30rem;
+  min-height: 25rem;
   border-radius: 2rem;
 }
 
 .aiman-img-container--imgit__phone {
-  width: 15rem;
-  height: 30rem;
+  max-width: 15rem;
+  min-width: 10rem;
+  max-height: 30rem;
+  min-height: 25rem;
   border-radius: 2rem;
 }
+/* images propreties ends here */
 
 /*------------------------- Musa Styles ------------------------------------*/
 
