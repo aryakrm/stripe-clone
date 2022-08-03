@@ -1,36 +1,7 @@
-/* 
-When you create a class, make sure to write your name at first E.g.:
-
-.ziad-classname {
-
-}
-
-.arya-classname {
-
-}
-
-.aiman-classname {
-
-}
-
-.musa-classname {
-
-}
-
-.munther-classname {
-  
-}
-
-
-
-*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
-  margin: 0;
 }
 
 /*------------------------- Arya Styles ------------------------------------*/
@@ -220,12 +191,51 @@ body {
 }
 
 /*------------------------- Aiman Styles ------------------------------------*/
-.aiman-inline-p {
-  display: inline;
+:is(.aiman-section3, .aiman-container) {
+  font-size: 62.5%;
+  padding: 2rem;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.aiman-section4-background-color {
-  background-color: #132340;
+.aiman-img-containers-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aiman-img-container {
+  /* flex-grow: 1; */
+  display: block;
+  width: fit-content;
+  height: fit-content;
+}
+
+.aiman-img-container--imgit {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.aiman-img-container--imgit__visa {
+  width: 20rem;
+  height: 11.8rem;
+  border-radius: 1rem;
+}
+
+.aiman-img-container--imgit__invoice {
+  border-radius: 1rem;
+}
+
+.aiman-img-container--imgit__payment_terminal {
+  width: 15rem;
+  height: 30rem;
+  border-radius: 2rem;
+}
+
+.aiman-img-container--imgit__phone {
+  width: 15rem;
+  height: 30rem;
+  border-radius: 2rem;
 }
 
 /*------------------------- Musa Styles ------------------------------------*/
