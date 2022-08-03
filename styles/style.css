@@ -1,11 +1,25 @@
 :root {
   font-size: 62.5%;
+  --sec3-font-family: "Inter";
+  --sec3-white-color: #fff;
+  --sec3-purple-color: #5f5bfe;
+  --sec3-dark-color: #002640;
+  --sec3-text-color: #3b5566;
+  --sec3-background-color: #f5f9fc;
+  --sec3-transition-duration-normal: 300ms;
+  --sec4-blue-color: #00d7ff;
+  --sec4-text-color: #a8becc;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--sec3-background-color);
 }
 
 /*------------------------- Arya Styles ------------------------------------*/
@@ -196,60 +210,144 @@
 
 /*------------------------- Aiman Styles ------------------------------------*/
 /*------------------------- Section   3  ------------------------------------*/
-/* container refers to divs */
-:is(.aiman-section3, .aiman-section3 > *) {
-  font-family: "Isnter";
+:is(.sec3-section3) {
+  background-color: var(--sec3-background-color);
   padding: 0;
   margin: 0;
 }
 
-.aiman-par-containers-wrapper {
+.sec3-par-containers-wrapper {
+  font-family: var(--sec3-font-family);
+  font-size: 2rem;
   position: relative;
+  margin: auto;
+  padding: 5rem 3rem;
 }
 
-.aiman-par-container {
+.sec3-uni {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--sec3-purple-color);
+}
+
+.sec3-par-container {
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-.aiman-par-container--parit {
+.sec3-par-container--parit {
+  color: var(--sec3-purple-color);
+  font-weight: 400;
+}
+
+.sec3-par-container__header {
+  margin: 2rem 0;
+  color: var(--sec3-dark-color);
+  max-width: 30ch;
+}
+
+.sec3-par-container__paragraph {
+  font-size: 1.8rem;
+  max-width: 40ch;
+  line-height: 1.5;
+  color: var(--sec3-text-color);
+}
+
+.sec3-par-container__paragraph span a {
+  font-weight: 500;
+  color: var(--sec3-purple-color);
+  transition-duration: var(--sec3-transition-duration-normal);
+}
+
+.sec3-par-container__paragraph span a:hover {
+  cursor: pointer;
+  color: var(--sec3-dark-color);
+}
+
+.sec3-button-container {
+  margin: 3rem 0;
+}
+
+.sec3-button-container > button {
+  position: relative;
+  padding: 0.8rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--sec3-font-family);
+  background-color: var(--sec3-purple-color);
+  color: var(--sec3-white-color);
+  border: none;
+  border-radius: 10rem;
+  transition-duration: var(--sec3-transition-duration-normal);
+}
+
+.sec3-button-container > button:hover {
+  cursor: pointer;
+  background-color: var(--sec3-dark-color);
+}
+
+/* 
+TODO: build the skew frame and deploy it on the buttons
+*/
+
+.sec3-button-container > button:hover::after {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  content: "";
+  animation-name: arrow;
+  animation-duration: 50ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+  0% {
+    content: ">";
+    transform: translate(-40%);
+  }
+
+  100% {
+    content: "->";
+    transform: translateX(0%);
+  }
 }
 
 /* This wrapper contain the divs of images */
-.aiman-img-containers-wrapper {
+.sec3-img-containers-wrapper {
   /* in order to get the shape we want with images we are going to use grid so no matter how big the screen is or small, the view will be the same, and if it's small the overflow will be hidden */
   display: flex;
   /* in order to make the pictures hidden the same as the website when the screen size gets smaller I used overflow */
-  flex-wrap: wrap;
   overflow: hidden;
 }
 /* Block Modifier for containers (divs) of images */
-.aiman-img-container {
+.sec3-img-container {
   width: fit-content;
   height: fit-content;
 }
 /* Element Modifier for images */
-.aiman-img-container--imgit {
+.sec3-img-container--imgit {
   width: 100%;
   height: 100%;
   object-fit: fill;
   border-radius: 1rem;
 }
 /* images propreties here, min-width/height = max-width/height - 5rem */
-.aiman-img-container--imgit__visa {
+.sec3-img-container--imgit__visa {
   max-width: 35rem;
   min-width: 30rem;
   max-height: 26.8rem;
   min-height: 20.8rem;
 }
 
-.aiman-img-container--imgit__invoice {
+.sec3-img-container--imgit__invoice {
   max-width: 64.6rem;
   min-width: 49.6rem;
   max-height: 54.8rem;
   min-height: 39.8rem;
 }
 
-.aiman-img-container--imgit__payment_terminal {
+.sec3-img-container--imgit__payment_terminal {
   max-width: 30rem;
   min-width: 20rem;
   max-height: 45rem;
@@ -257,7 +355,7 @@
   border-radius: 3rem;
 }
 
-.aiman-img-container--imgit__phone {
+.sec3-img-container--imgit__phone {
   max-width: 35rem;
   min-width: 20rem;
   max-height: 50rem;
@@ -265,11 +363,139 @@
   border-radius: 3rem;
 }
 
-.aiman-img-container--imgit__fraud {
+.sec3-img-container--imgit__fraud {
   max-width: 84.4rem;
   max-height: 59.3rem;
 }
 /* images propreties ends here */
+/* Section3 ends here */
+
+/*------------------------- Section   4  ------------------------------------*/
+
+.section4 {
+  padding-top: 10vh;
+  background-color: var(--sec3-dark-color);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  margin-top: -10%;
+  max-height: fit-content;
+  max-width: 100%;
+}
+
+.sec4-uni {
+  color: var(--sec4-blue-color);
+}
+
+.sec4-containers-wrapper {
+  max-width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  font-size: 2rem;
+  padding: 12rem 3rem;
+  font-family: var(--sec3-font-family);
+}
+
+.sec4-container-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sec4-container-main__header {
+  color: var(--sec3-white-color);
+  max-width: 40ch;
+}
+
+.sec4-container-main__paragraph {
+  color: var(--sec4-text-color);
+}
+
+.sec4-main-button > button {
+  position: relative;
+  padding: 0.8rem 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--sec3-font-family);
+  background-color: var(--sec4-blue-color);
+  color: var(--sec3-dark-color);
+  border: none;
+  border-radius: 10rem;
+  transition-duration: var(--sec3-transition-duration-normal);
+}
+
+.sec4-main-button > button:hover {
+  cursor: pointer;
+  background-color: var(--sec3-background-color);
+}
+
+.sec4-main-button > button:hover::after {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  content: "";
+  animation-name: arrow;
+  animation-duration: 50ms;
+  animation-fill-mode: forwards;
+}
+
+.sec4-container-sib {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sec4-terminal-animation {
+}
+
+.sec4-container-sib__header h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--sec3-white-color);
+}
+
+.sec4-container-sib__paragraph {
+  font-size: 1.5rem;
+  color: var(--sec4-text-color);
+}
+
+.sec-sib-button > button {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: var(--sec3-font-family);
+  background-color: transparent;
+  color: var(--sec4-blue-color);
+  border: none;
+  border-radius: 10rem;
+  transition-duration: var(--sec3-transition-duration-normal);
+}
+
+.sec-sib-button > button:hover {
+  cursor: pointer;
+  color: var(--sec3-white-color);
+}
+
+.sec-sib-button > button:hover::after {
+  position: absolute;
+  right: -2.5rem;
+  content: "";
+  animation-name: arrow;
+  animation-duration: 50ms;
+  animation-fill-mode: forwards;
+}
+
+.sec4-img-container {
+  width: fit-content;
+  height: fit-content;
+}
+
+.sec4-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+/* Section 4 Ends here */
 
 /*------------------------- Musa Styles ------------------------------------*/
 
