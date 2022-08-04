@@ -197,7 +197,131 @@ body {
 .arya-lyft {
   width: 60px;
 }
+/* ------------------Cards Section (Arya)------------------------------------- */
+.arya-cardsSec {
+  font-family: "Inter";
+}
 
+.arya-cards-title {
+  display: flex;
+  flex-direction: column;
+}
+.arya-cards-title h2 {
+  color: rgba(99, 90, 255, 0.9);
+  font-size: 1.8rem;
+  margin: 30px 200px;
+}
+.arya-cards-title h1 {
+  color: rgb(10, 37, 64);
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+.arya-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 200px;
+  margin-bottom: 200px;
+}
+.arya-cards a {
+  text-decoration: none;
+  color: rgb(99, 90, 255);
+}
+.arya-cards a:hover {
+  color: black;
+  font-weight: 500;
+}
+.arya-cards img {
+  width: 50px;
+}
+.arya-cards h5 {
+  padding-left: 10px;
+  border-left: 0.5px solid rgb(99, 90, 255);
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.arya-cards p {
+  opacity: 0.8;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.arya-topFooter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Inter";
+  gap: 40px;
+}
+.arya-left-topFooter {
+  margin-left: 200px;
+}
+.arya-left-topFooter h1 {
+  margin-bottom: 20px;
+  font-weight: 550;
+  font-size: 2.5rem;
+}
+
+.arya-left-topFooter p {
+  opacity: 0.8;
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  line-height: 2.7rem;
+}
+.arya-left-topFooter p a {
+  font-weight: 500;
+}
+.arya-left-topFooter p a:hover {
+  color: black;
+}
+.arya-code-card {
+  margin-left: 20px;
+}
+.arya-tag-card p {
+  margin-bottom: 20px;
+}
+.arya-code-card p {
+  margin-bottom: 20px;
+}
+.arya-tag-card a {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.arya-code-card a {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.arya-strtBtn {
+  background-color: rgb(99, 91, 255);
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 17px;
+  padding: 7px 13px;
+  font-family: "Inter";
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.arya-strtBtn:hover {
+  background-color: rgb(10, 37, 64, 1);
+  cursor: pointer;
+}
+.arya-cntctBtn {
+  background-color: transparent;
+  color: rgb(99, 91, 255);
+  border: none;
+  border-radius: 17px;
+  padding: 6px 12px;
+  font-family: "Inter";
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.arya-cntctBtn:hover {
+  color: rgb(10, 37, 64, 1);
+  cursor: pointer;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
