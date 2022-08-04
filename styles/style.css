@@ -335,10 +335,43 @@ body {
 }
 
 /*-------------------------   Section   3   ------------------------------------*/
+
+/* utility classes */
+
+.img-it {
+  width: 100%;
+  height: 100%;
+}
+
+.img-it__contain {
+  object-fit: contain;
+}
+
+.img-it__fill {
+  object-fit: fill;
+}
+
+.img-it__cover {
+  object-fit: cover;
+}
+
+.contain-it {
+  width: fit-content;
+  height: fit-content;
+}
+
+.radius-it {
+  border-radius: 1rem;
+}
+
+.radius-it_3rem {
+  border-radius: 3rem;
+}
+
+/* utility classes end here */
+
 :is(.sec3-section3) {
   background-color: var(--sec3-background-color);
-  padding: 0;
-  margin: 0;
 }
 
 .sec3-par-containers-wrapper {
@@ -440,23 +473,10 @@ TODO: build the skew frame and deploy it on the buttons
 
 /* This wrapper contain the divs of images */
 .sec3-img-containers-wrapper {
-  /* in order to get the shape we want with images we are going to use grid so no matter how big the screen is or small, the view will be the same, and if it's small the overflow will be hidden */
   display: flex;
-  /* in order to make the pictures hidden the same as the website when the screen size gets smaller I used overflow */
   overflow: hidden;
 }
-/* Block Modifier for containers (divs) of images */
-.sec3-img-container {
-  width: fit-content;
-  height: fit-content;
-}
-/* Element Modifier for images */
-.sec3-img-container--imgit {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  border-radius: 1rem;
-}
+
 /* images propreties here, min-width/height = max-width/height - 5rem */
 .sec3-img-container--imgit__visa {
   max-width: 35rem;
@@ -477,7 +497,6 @@ TODO: build the skew frame and deploy it on the buttons
   min-width: 20rem;
   max-height: 45rem;
   min-height: 35rem;
-  border-radius: 3rem;
 }
 
 .sec3-img-container--imgit__phone {
@@ -485,7 +504,6 @@ TODO: build the skew frame and deploy it on the buttons
   min-width: 20rem;
   max-height: 50rem;
   min-height: 35rem;
-  border-radius: 3rem;
 }
 
 .sec3-img-container--imgit__fraud {
@@ -630,32 +648,27 @@ TODO: build the skew frame and deploy it on the buttons
 
 /*------------------------- Footer styles ------------------------------------*/
 
+/* New footer design */
+
 .footer {
   padding-top: 20vh;
   background-color: var(--sec3-background-color);
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
   margin-top: -5%;
-  max-width: 100%;
-  max-height: fit-content;
 }
 
-/* flexbox for footer wrapper */
 .footer-wrapper {
-  max-width: fit-content;
-  margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  flex-wrap: wrap;
-  gap: 3rem;
-  font-size: 2rem;
+  gap: 10rem;
+  max-width: fit-content;
+  margin: auto;
   padding: 12rem 3rem;
+  font-size: 2rem;
   font-family: var(--sec3-font-family);
 }
-/* FlexBox for header in footer */
+
 .footer-container--header {
   display: flex;
   flex-direction: column;
@@ -663,18 +676,12 @@ TODO: build the skew frame and deploy it on the buttons
 }
 
 .footer-container--header__logo {
-  background-color: var(--sec3-dark-color);
   width: 8rem;
-  height: fit-content;
+  transition-duration: var(--sec3-transition-duration-normal);
 }
 
-.footer-container--header__logo__img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.footer-container--header__address {
+.footer-container--header__logo:hover {
+  opacity: 0.5;
 }
 
 .footer-container--header__address > button {
@@ -689,9 +696,6 @@ TODO: build the skew frame and deploy it on the buttons
   font-style: normal;
   color: var(--footer-dark-color);
   font-weight: 500;
-}
-
-.footer-container--header__local {
 }
 
 .footer-container--header__local > button {
@@ -710,43 +714,35 @@ TODO: build the skew frame and deploy it on the buttons
   font-weight: 500;
   color: var(--sec3-text-color);
 }
-/* End of flexbox */
 
-/* flexbox for links */
+/* New footer ends here */
+
+/* columns for links to have a great responsive layout */
+/* making all the div that contains the divs of lists flexable and can grow, a small trick to apply on devices with small screens ;) */
 .footer-links {
   flex-grow: 1;
-  display: flex;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  columns: 2;
+  column-width: 10rem;
 }
 
+/* media query to keep the links layout nice :) */
+@media screen and (min-width: 600px) {
+  .footer-links {
+    columns: 3;
+  }
+}
+
+/* utility class for divs that contain "ul" for links */
 .footer-container--headlink {
+  break-inside: avoid;
   font-size: 1.4rem;
   width: fit-content;
   height: fit-content;
+  margin-top: 0;
+  margin-bottom: 3rem;
 }
 
-.headlink__item0 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.headlink__item1 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.headlink__item2 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
+/* utility class for spans so we can edit them a bit and play with the font size and color */
 .footer-container--headlink > span {
   display: inline-block;
   margin-bottom: 1rem;
@@ -754,17 +750,20 @@ TODO: build the skew frame and deploy it on the buttons
   color: var(--footer-dark-color);
 }
 
+/* here we display each list as a flex so we have more control over the list items and links */
 .footer-container--headlink > ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
+/* this to make each list item fits the link inside it to save more space if we want to add stuff */
 .footer-container--headlink > ul > li {
   width: fit-content;
   height: fit-content;
 }
 
+/* giving a nice transaction/color/ and other propreties for the links */
 .footer-container--headlink > ul > li > a {
   color: var(--footer-dark-color);
   font-weight: 500;
@@ -772,6 +771,7 @@ TODO: build the skew frame and deploy it on the buttons
   transition-property: color;
 }
 
+/* changes the color of links on hover */
 .footer-container--headlink > ul > li > a:hover {
   color: var(--sec4-text-color);
 }
