@@ -9,6 +9,7 @@
   --sec3-transition-duration-normal: 300ms;
   --sec4-blue-color: #00d7ff;
   --sec4-text-color: #a8becc;
+  --footer-dark-color: #0e2943;
 }
 
 * {
@@ -16,6 +17,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -332,8 +334,7 @@ body {
   }
 }
 
-/*------------------------- Aiman Styles ------------------------------------*/
-/*------------------------- Section   3  ------------------------------------*/
+/*-------------------------   Section   3   ------------------------------------*/
 :is(.sec3-section3) {
   background-color: var(--sec3-background-color);
   padding: 0;
@@ -494,15 +495,16 @@ TODO: build the skew frame and deploy it on the buttons
 /* images propreties ends here */
 /* Section3 ends here */
 
-/*------------------------- Section   4  ------------------------------------*/
+/*------------------------- Section   4   styles  ------------------------------------*/
 
-.section4 {
+.sec4-section4 {
   padding-top: 10vh;
   background-color: var(--sec3-dark-color);
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-  margin-top: -10%;
-  max-height: fit-content;
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  margin-top: -5%;
+  margin-bottom: -5%;
   max-width: 100%;
+  max-height: fit-content;
 }
 
 .sec4-uni {
@@ -532,6 +534,7 @@ TODO: build the skew frame and deploy it on the buttons
 }
 
 .sec4-container-main__paragraph {
+  max-width: 60ch;
   color: var(--sec4-text-color);
 }
 
@@ -625,4 +628,150 @@ TODO: build the skew frame and deploy it on the buttons
 
 /*------------------------- Munther Styles ---------------------------------*/
 
-/*------------------------- Ziad Styles ------------------------------------*/
+/*------------------------- Footer styles ------------------------------------*/
+
+.footer {
+  padding-top: 20vh;
+  background-color: var(--sec3-background-color);
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  margin-top: -5%;
+  max-width: 100%;
+  max-height: fit-content;
+}
+
+/* flexbox for footer wrapper */
+.footer-wrapper {
+  max-width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+  gap: 3rem;
+  font-size: 2rem;
+  padding: 12rem 3rem;
+  font-family: var(--sec3-font-family);
+}
+/* FlexBox for header in footer */
+.footer-container--header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-container--header__logo {
+  background-color: var(--sec3-dark-color);
+  width: 8rem;
+  height: fit-content;
+}
+
+.footer-container--header__logo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer-container--header__address {
+}
+
+.footer-container--header__address > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.footer-container--header__address > button > address {
+  font-family: "Inter";
+  font-size: 1.5rem;
+  font-style: normal;
+  color: var(--footer-dark-color);
+  font-weight: 500;
+}
+
+.footer-container--header__local {
+}
+
+.footer-container--header__local > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--footer-dark-color);
+  font-family: "Inter";
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.footer-container--header__copywrite {
+  font-family: "Inter";
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--sec3-text-color);
+}
+/* End of flexbox */
+
+/* flexbox for links */
+.footer-links {
+  flex-grow: 1;
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.footer-container--headlink {
+  font-size: 1.4rem;
+  width: fit-content;
+  height: fit-content;
+}
+
+.headlink__item0 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.headlink__item1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headlink__item2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-container--headlink > span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--footer-dark-color);
+}
+
+.footer-container--headlink > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-container--headlink > ul > li {
+  width: fit-content;
+  height: fit-content;
+}
+
+.footer-container--headlink > ul > li > a {
+  color: var(--footer-dark-color);
+  font-weight: 500;
+  transition-duration: 300ms;
+  transition-property: color;
+}
+
+.footer-container--headlink > ul > li > a:hover {
+  color: var(--sec4-text-color);
+}
