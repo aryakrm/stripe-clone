@@ -195,6 +195,57 @@ body {
 .arya-lyft {
   width: 60px;
 }
+/* ------------------Cards Section (Arya)------------------------------------- */
+.arya-cardsSec {
+  font-family: "Inter";
+}
+
+.arya-cards-title {
+  display: flex;
+  flex-direction: column;
+}
+.arya-cards-title h2 {
+  color: rgba(99, 90, 255, 0.9);
+  font-size: 1.8rem;
+  margin: 30px 200px;
+}
+.arya-cards-title h1 {
+  color: rgb(10, 37, 64);
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+.arya-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 200px;
+  margin-bottom: 200px;
+}
+.arya-cards a {
+  text-decoration: none;
+  color: rgb(99, 90, 255);
+}
+.arya-cards a:hover {
+  color: black;
+  font-weight: 500;
+}
+.arya-cards img {
+  width: 50px;
+}
+.arya-cards h5 {
+  padding-left: 10px;
+  border-left: 0.5px solid rgb(99, 90, 255);
+  margin: 10px 0;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.arya-cards p {
+  opacity: 0.8;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
 
 @keyframes gradient {
   0% {
