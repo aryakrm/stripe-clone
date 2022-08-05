@@ -370,16 +370,18 @@ body {
 
 /* utility classes end here */
 
-:is(.sec3-section3) {
+/* section 3 starts here */
+.section3 {
+  padding-top: 10vh;
   background-color: var(--sec3-background-color);
+  max-width: 100%;
 }
 
 .sec3-par-containers-wrapper {
   font-family: var(--sec3-font-family);
   font-size: 2rem;
-  position: relative;
-  margin: auto;
-  padding: 5rem 3rem;
+  max-width: fit-content;
+  margin: 10rem auto;
 }
 
 .sec3-uni {
@@ -388,46 +390,49 @@ body {
   color: var(--sec3-purple-color);
 }
 
+.sec3-par-container__header {
+  color: var(--sec3-dark-color);
+  max-width: 30ch;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
 .sec3-par-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  column-count: 1;
+}
+
+@media screen and (min-width: 700px) {
+  .sec3-par-container {
+    column-count: 2;
+  }
 }
 
 .sec3-par-container--parit {
-  color: var(--sec3-purple-color);
+  background-color: red;
   font-weight: 400;
-}
-
-.sec3-par-container__header {
-  margin: 2rem 0;
-  color: var(--sec3-dark-color);
-  max-width: 30ch;
-}
-
-.sec3-par-container__paragraph {
+  margin-bottom: 1rem;
   font-size: 1.8rem;
   max-width: 40ch;
   line-height: 1.5;
   color: var(--sec3-text-color);
 }
 
-.sec3-par-container__paragraph span a {
+.avoid {
+  break-inside: avoid;
+}
+
+.sec3-par-container--parit a {
   font-weight: 500;
   color: var(--sec3-purple-color);
   transition-duration: var(--sec3-transition-duration-normal);
 }
 
-.sec3-par-container__paragraph span a:hover {
+.sec3-par-container--parit a:hover {
   cursor: pointer;
   color: var(--sec3-dark-color);
 }
 
-.sec3-button-container {
-  margin: 3rem 0;
-}
-
-.sec3-button-container > button {
+.sec3-button-container button {
   position: relative;
   padding: 0.8rem 3rem;
   font-size: 1.5rem;
@@ -440,7 +445,7 @@ body {
   transition-duration: var(--sec3-transition-duration-normal);
 }
 
-.sec3-button-container > button:hover {
+.sec3-button-container button:hover {
   cursor: pointer;
   background-color: var(--sec3-dark-color);
 }
@@ -449,7 +454,7 @@ body {
 TODO: build the skew frame and deploy it on the buttons
 */
 
-.sec3-button-container > button:hover::after {
+.sec3-button-container button:hover::after {
   position: absolute;
   right: 1rem;
   bottom: 0.8rem;
@@ -721,14 +726,14 @@ TODO: build the skew frame and deploy it on the buttons
 /* making all the div that contains the divs of lists flexable and can grow, a small trick to apply on devices with small screens ;) */
 .footer-links {
   flex-grow: 1;
-  columns: 2;
+  column-count: 2;
   column-width: 10rem;
 }
 
 /* media query to keep the links layout nice :) */
 @media screen and (min-width: 600px) {
   .footer-links {
-    columns: 3;
+    column-count: 3;
   }
 }
 
