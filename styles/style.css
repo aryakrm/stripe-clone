@@ -385,6 +385,7 @@ body {
   flex-direction: column;
   background-color: var(--sec3-background-color);
   overflow: hidden;
+  /* margin-bottom: 10%; */
 }
 
 .sec3-par-containers-wrapper {
@@ -573,11 +574,11 @@ TODO: build the skew frame and deploy it on the buttons
 /*------------------------- Section   4   styles  ------------------------------------*/
 
 .sec4-section4 {
-  padding-top: 10vh;
+  padding: 10vh 0;
   background-color: var(--sec3-dark-color);
-  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
-  margin-top: -5%;
-  margin-bottom: -5%;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  margin-top: -10vh;
+  margin-bottom: 30vh;
   max-width: 100%;
   max-height: fit-content;
 }
