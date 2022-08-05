@@ -385,7 +385,7 @@ body {
 }
 
 .sec3-uni {
-  margin-bottom: 1rem;
+  margin: 2rem;
   font-weight: 600;
   color: var(--sec3-purple-color);
 }
@@ -394,31 +394,31 @@ body {
   color: var(--sec3-dark-color);
   max-width: 30ch;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin: 2rem;
 }
 
 .sec3-par-container {
-  column-count: 1;
+  display: flex;
+  flex-flow: column;
 }
 
+/* I could have used flex wrap but this is better, because when using flex wrap with margin auto the container will have a huge empty space on the right side waiting to be filled. */
+/* This way is more flexable  */
 @media screen and (min-width: 700px) {
   .sec3-par-container {
-    column-count: 2;
+    flex-flow: row;
   }
 }
 
 .sec3-par-container--parit {
-  background-color: red;
+  /* background-color: red; */
+  margin: 2rem;
   font-weight: 400;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   max-width: 40ch;
   line-height: 1.5;
   color: var(--sec3-text-color);
-}
-
-.avoid {
-  break-inside: avoid;
 }
 
 .sec3-par-container--parit a {
@@ -435,6 +435,7 @@ body {
 .sec3-button-container button {
   position: relative;
   padding: 0.8rem 3rem;
+  margin: 4rem 2rem;
   font-size: 1.5rem;
   font-weight: 600;
   font-family: var(--sec3-font-family);
