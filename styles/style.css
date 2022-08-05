@@ -22,6 +22,7 @@
 
 body {
   background-color: var(--sec3-background-color);
+  opacity: 1;
 }
 
 /*------------------------- Arya Styles ------------------------------------*/
@@ -368,24 +369,35 @@ body {
   border-radius: 3rem;
 }
 
+.shadow-it {
+  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* utility classes end here */
 
 /* section 3 starts here */
 .section3 {
-  padding-top: 10vh;
+  /* padding-top: 5vh; */
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   background-color: var(--sec3-background-color);
-  max-width: 100%;
+  overflow: hidden;
 }
 
 .sec3-par-containers-wrapper {
+  position: relative;
+  top: 5rem;
   font-family: var(--sec3-font-family);
   font-size: 2rem;
   max-width: fit-content;
-  margin: 10rem auto;
+  margin: auto;
 }
 
 .sec3-uni {
-  margin-bottom: 1rem;
+  margin: 2rem;
   font-weight: 600;
   color: var(--sec3-purple-color);
 }
@@ -394,31 +406,31 @@ body {
   color: var(--sec3-dark-color);
   max-width: 30ch;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin: 2rem;
 }
 
 .sec3-par-container {
-  column-count: 1;
+  display: flex;
+  flex-flow: column;
 }
 
+/* I could have used flex wrap but this is better, because when using flex wrap with margin auto the container will have a huge empty space on the right side waiting to be filled. */
+/* This way is more flexable  */
 @media screen and (min-width: 700px) {
   .sec3-par-container {
-    column-count: 2;
+    flex-flow: row;
   }
 }
 
 .sec3-par-container--parit {
-  background-color: red;
+  /* background-color: red; */
+  margin: 2rem;
   font-weight: 400;
   margin-bottom: 1rem;
   font-size: 1.8rem;
   max-width: 40ch;
   line-height: 1.5;
   color: var(--sec3-text-color);
-}
-
-.avoid {
-  break-inside: avoid;
 }
 
 .sec3-par-container--parit a {
@@ -435,6 +447,7 @@ body {
 .sec3-button-container button {
   position: relative;
   padding: 0.8rem 3rem;
+  margin: 4rem 2rem 0;
   font-size: 1.5rem;
   font-weight: 600;
   font-family: var(--sec3-font-family);
@@ -476,10 +489,47 @@ TODO: build the skew frame and deploy it on the buttons
   }
 }
 
+/* Contains the grid if images*/
+.sec3-imgs-father {
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: auto;
+}
+
 /* This wrapper contain the divs of images */
 .sec3-img-containers-wrapper {
-  display: flex;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(16, 70px);
+  grid-template-rows: repeat(10, 85px);
+}
+
+.visa_position {
+  margin-left: 4rem;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.invoice_position {
+  margin-left: 3rem;
+  grid-column: 6;
+  grid-row: 2;
+}
+
+.terminal_position {
+  grid-column: 14;
+  /* position: relative; */
+  /* bottom: 10rem; */
+}
+
+.phone_position {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.fraud_position {
+  margin-left: 3rem;
+  grid-column: 6;
+  grid-row: 7;
 }
 
 /* images propreties here, min-width/height = max-width/height - 5rem */
@@ -513,7 +563,9 @@ TODO: build the skew frame and deploy it on the buttons
 
 .sec3-img-container--imgit__fraud {
   max-width: 84.4rem;
+  min-width: 64.4rem;
   max-height: 59.3rem;
+  min-height: 39.3rem;
 }
 /* images propreties ends here */
 /* Section3 ends here */
