@@ -199,53 +199,50 @@ body {
 .arya-lyft {
   width: 60px;
 }
-/* ------------------Cards Section (Arya)------------------------------------- */
+/* ------------------Cards Section5------------------------------------- */
 .arya-cardsSec {
-  font-family: "Inter";
+  font-family: var(--sec3-font-family);
   max-width: fit-content;
   max-height: fit-content;
   margin: auto;
-  padding: 30px;
 }
 
 .arya-cards-title {
   display: flex;
   flex-direction: column;
+  margin: 3rem;
 }
 .arya-cards-title h2 {
   color: rgba(99, 90, 255, 0.9);
   font-size: 1.8rem;
-  margin: 30px 0;
+  margin: 3rem 0;
 }
 .arya-cards-title h1 {
   color: rgb(10, 37, 64);
   font-size: 3.5rem;
   font-weight: 600;
-  margin-left: 0;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 .arya-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-left: 0;
-  margin-bottom: 200px;
+  gap: 3rem;
+  margin: 3rem;
 }
 .arya-cards a {
-  text-decoration: none;
-  color: rgb(99, 90, 255);
+  color: var(--sec3-purple-color);
 }
 .arya-cards a:hover {
-  color: black;
+  color: var(--sec3-dark-color);
   font-weight: 500;
 }
 .arya-cards img {
-  width: 50px;
+  width: 5rem;
 }
 .arya-cards h5 {
-  padding-left: 10px;
-  border-left: 0.5px solid rgb(99, 90, 255);
-  margin: 10px 0;
+  padding-left: 1rem;
+  border-left: 0.5px solid var(--sec3-purple-color);
+  margin: 1rem 0;
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -255,17 +252,30 @@ body {
   line-height: 2.5rem;
 }
 
+/* Section5 cards ends here */
+
+/* Section8 starts here */
+
+/* This is the wrapper of section 8 */
 .arya-topFooter {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-family: "Inter";
-  gap: 40px;
-  padding: 30px;
+  gap: 3rem;
+  width: fit-content;
+  height: fit-content;
+  margin: 5vh auto;
+  font-family: var(--sec3-font-family);
 }
+
+.arya-right-topfooter {
+  margin: 3rem;
+}
+
 .arya-left-topFooter {
-  margin-left: 200px;
+  margin: 3rem;
 }
+
 .arya-left-topFooter h1 {
   margin-bottom: 20px;
   font-weight: 550;
@@ -280,9 +290,10 @@ body {
 }
 .arya-left-topFooter p a {
   font-weight: 500;
+  color: var(--sec3-purple-color);
 }
 .arya-left-topFooter p a:hover {
-  color: black;
+  color: var(--sec3-dark-color);
 }
 .arya-code-card {
   margin-left: 20px;
