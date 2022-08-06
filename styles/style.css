@@ -376,6 +376,7 @@ body {
 /* utility classes end here */
 
 /* section 3 starts here */
+/* This one for responsiveness */
 .section3 {
   max-width: fit-content;
   max-height: fit-content;
@@ -386,6 +387,7 @@ body {
   overflow: hidden;
 }
 
+/* This one for responsiveness */
 .sec3-par-containers-wrapper {
   position: relative;
   top: 5rem;
@@ -408,6 +410,7 @@ body {
   margin: 2rem;
 }
 
+/* This one for responsiveness */
 .sec3-par-container {
   display: flex;
   flex-flow: column;
