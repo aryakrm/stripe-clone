@@ -102,6 +102,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   gap: 20px;
+  flex: 2;
 }
 .arya-intro > .arya-intro-right {
   position: absolute;
@@ -201,6 +202,10 @@ body {
 /* ------------------Cards Section (Arya)------------------------------------- */
 .arya-cardsSec {
   font-family: "Inter";
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: auto;
+  padding: 30px;
 }
 
 .arya-cards-title {
@@ -210,20 +215,20 @@ body {
 .arya-cards-title h2 {
   color: rgba(99, 90, 255, 0.9);
   font-size: 1.8rem;
-  margin: 30px 200px;
+  margin: 30px 0;
 }
 .arya-cards-title h1 {
   color: rgb(10, 37, 64);
   font-size: 3.5rem;
   font-weight: 600;
-  margin-left: 200px;
+  margin-left: 0;
   margin-bottom: 50px;
 }
 .arya-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-left: 200px;
+  margin-left: 0;
   margin-bottom: 200px;
 }
 .arya-cards a {
@@ -256,6 +261,7 @@ body {
   flex-wrap: wrap;
   font-family: "Inter";
   gap: 40px;
+  padding: 30px;
 }
 .arya-left-topFooter {
   margin-left: 200px;
@@ -323,6 +329,7 @@ body {
   color: rgb(10, 37, 64, 1);
   cursor: pointer;
 }
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
