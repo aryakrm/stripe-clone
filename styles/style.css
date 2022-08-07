@@ -91,7 +91,7 @@ body {
 }
 
 .sec0-header-animation {
-  width: 100vw;
+  width: 100%;
   height: 80vh;
   position: absolute;
   z-index: -1;
@@ -866,11 +866,158 @@ TODO: build the skew frame and deploy it on the buttons
   height: 100%;
   object-fit: fill;
 }
+
 /* Section 4 Ends here */
+/* 
 
+
+*/
 /*------------------------- Musa Styles ------------------------------------*/
+/* --------------section 6 --(part 1)---*/
+.Musa-ambition {
+  margin: 0;
+  padding: 0;
+}
 
-/*------------------------- Munther Styles ---------------------------------*/
+/*  background-image */
+.Musa-background-image {
+  background-image: url("../globe.JPG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 89%;
+  width: 1330;
+  position: relative;
+}
+
+.Musa-header {
+  width: 800px;
+  margin-top: 20vh;
+  margin-left: 20vh;
+  line-height: 40px;
+}
+
+header h1 {
+  font-size: 30px;
+  margin-top: 7vh;
+  width: 35%;
+}
+
+.Musa-ambition {
+  margin-left: 20vh;
+  font-size: 3vh;
+  font-weight: bold;
+  margin-top: 5vh;
+  width: 73vh;
+}
+
+.Musa-section1 {
+  display: flex;
+  margin-left: 20vh;
+  margin-top: 3%;
+}
+
+.Musa-article1 h1 {
+  border-left: 2px solid rgb(112, 216, 235);
+  padding: 5px;
+  font-size: 25px;
+}
+
+.Musa-article1 h1 {
+  font-weight: bold;
+}
+
+.Musa-section2 h3 {
+  margin-top: 15%;
+}
+
+.Musa-article1 p {
+  margin-top: 3%;
+  width: 240px;
+}
+
+/* ---------------- section 7 (part 1)--------------------*/
+.Musa-section2 {
+  display: flex;
+
+  position: relative;
+  margin-top: 20%;
+  margin-left: 20vh;
+  margin-right: 20vh;
+}
+
+.Musa-header {
+  width: 80%;
+  margin-top: 20%;
+}
+
+.Musa-article2 h2 {
+  width: 55vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.Musa-div {
+  font-size: 20px;
+  width: 70vh;
+}
+
+.Musa-button {
+  background-color: rgb(74, 73, 138);
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Musa-box {
+  border: 1px solid rgb(212, 192, 192);
+  border-radius: 7px;
+  height: 400px;
+  width: 1000px;
+  text-align: auto;
+  display: grid;
+  position: relative;
+  margin-left: 20vh;
+  margin-bottom: 10%;
+}
+
+.Musa-section2 img:nth-of-type(2) {
+  display: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.Musa-section2 img:nth-of-type(1) {
+  display: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 40px;
+}
+
+div > h2 {
+  text-align: center;
+  margin-top: 15%;
+  font-size: 40px;
+}
+
+.Musa-keynote {
+  margin-left: 40px;
+}
+
+.Musa-lastNote {
+  margin-left: 40px;
+  width: 45vh;
+}
+
+/*----------end------------------*/
 
 /*------------------------- Footer styles ------------------------------------*/
 
