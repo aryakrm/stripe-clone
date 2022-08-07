@@ -25,158 +25,353 @@ body {
   opacity: 1;
 }
 
+/* utility classes */
+
+.img-it {
+  width: 100%;
+  height: 100%;
+}
+
+.img-it__contain {
+  object-fit: contain;
+}
+
+.img-it__fill {
+  object-fit: fill;
+}
+
+.img-it__cover {
+  object-fit: cover;
+}
+
+.contain-it {
+  width: fit-content;
+  height: fit-content;
+}
+
+.radius-it {
+  border-radius: 1rem;
+}
+
+.radius-it_3rem {
+  border-radius: 3rem;
+}
+
+.shadow-it {
+  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-after:hover::after {
+  position: absolute;
+  right: 0.3rem;
+  bottom: 1rem;
+  content: "";
+  animation-name: arrow;
+  animation-duration: 50ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes arrow {
+  0% {
+    content: ">";
+    transform: translate(-40%);
+  }
+
+  100% {
+    content: "->";
+    transform: translateX(0%);
+  }
+}
+
+/* utility classes end here */
+
 /*------------------------- Section0 header------------------------------------*/
-.arya-header {
+
+.section0 {
+}
+
+.sec0-header-animation {
+  width: 100vw;
+  height: 80vh;
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
-  height: 700px;
+}
+
+/* flexbox for logo and nav */
+header {
   position: relative;
-}
-.arya-whitePatern {
-  position: absolute;
-  top: 50px;
-  left: 0px;
-  width: 100%;
-  height: 700px;
-}
-.arya-nav {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 20px;
-  padding: 5px;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  background-color: transparent;
-  height: 60px;
+  padding: 2rem;
+  gap: 4rem;
 }
-.arya-links {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
+
+/* flex item */
+.sec0-logo {
+  width: 8rem;
+  height: 3.5rem;
+  margin-left: 5vw;
 }
-.arya-links a {
-  text-decoration: none;
-  color: white;
-  font-family: "Inter";
-  font-size: 15px;
-  font-weight: 500;
-}
-.arya-links a:hover {
-  color: rgba(255, 255, 255, 0.5);
-}
-.arya-signInBtn {
-  width: 85px;
-  margin: 190px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 1);
-  border: none;
-  border-radius: 17px;
-  padding: 8px;
-  font-family: "Inter";
-  font-size: 15px;
-  font-weight: 500;
-}
-.arya-signInBtn:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-}
-.arya-logo {
-  width: 60px;
-  margin-left: 175px;
-  margin-right: 200px;
-}
-.arya-logo:hover {
+.sec0-logo:hover {
   opacity: 0.5;
   cursor: pointer;
 }
-.arya-intro > .arya-intro-left {
-  position: absolute;
-  top: 145px;
-  left: 200px;
-  font-family: "Inter";
+
+/* flex item */
+.sec0-nav {
+  flex-grow: 1;
+}
+
+.more {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .more {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    color: var(--sec3-white-color);
+    border-radius: 1.7rem;
+  }
+
+  .more:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+  }
+
+  .sec0-nav-list0 {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    right: 2rem;
+    top: 1rem;
+    z-index: 100;
+  }
+
+  .more:hover .sec0-nav-list0 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .sec0-nav-list {
+    display: none;
+  }
+
+  /* used margin auto with flex items to build responsivness */
+  .sec0-nav-list0 li:nth-of-type(1) {
+    margin-left: auto;
+  }
+  /* used margin auto with flex items to build responsivness */
+  .sec0-nav-list0 li:nth-of-type(6) {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1.7rem;
+    font-family: var(--sec3-font-family);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .sec0-nav-list0 li:nth-of-type(6) > a {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+  .sec0-nav-list0 li:nth-of-type(6):hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .sec0-nav-list0 a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--sec3-font-family);
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .sec0-nav-list0 a:hover {
+    color: var(--sec4-text-color);
+  }
+}
+
+/* flexbox for links list */
+
+@media screen and (min-width: 1000px) {
+  .header {
+    max-width: 70vw;
+    margin: auto;
+  }
+
+  .sec0-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+
+/* used margin auto with flex items to build responsivness */
+.sec0-nav-list li:nth-of-type(1) {
+  margin-left: auto;
+}
+/* used margin auto with flex items to build responsivness */
+.sec0-nav-list li:nth-of-type(6) {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1.7rem;
+  font-family: var(--sec3-font-family);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.sec0-nav-list li:nth-of-type(6) > a {
+  display: block;
+  padding: 1rem 2rem;
+}
+
+.sec0-nav-list li:nth-of-type(6):hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sec0-nav-list a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--sec3-font-family);
+  font-size: 15px;
+  font-weight: 500;
+}
+.sec0-nav-list a:hover {
+  color: var(--sec4-text-color);
+}
+
+/* section0 ends here */
+/*  */
+/*  */
+/* 
+
+
+
+
+
+
+*/
+/* section1 starts here */
+
+.sec1-intro {
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: auto;
+  margin-top: 10rem;
+  margin-bottom: 20%;
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+.sec1-intro-left {
+  font-family: var(--sec3-font-family);
   font-weight: 500;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 20px;
-  flex: 2;
+  gap: 2rem;
 }
-.arya-intro > .arya-intro-right {
-  position: absolute;
-  top: 300px;
-}
-.arya-sessions {
+
+.sec1-sessions {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   color: white;
-  padding: 6px 15px;
+  padding: 1rem 2rem;
   border-radius: 20px;
   font-family: "Inter";
   font-size: 12px;
   font-weight: 500;
   width: fit-content;
 }
-.arya-sessions a {
+
+.sec1-sessions a {
   text-decoration: none;
   color: white;
 }
-.arya-sessions a:hover {
+
+.sec1-sessions a:hover {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.arya-intro-title {
-  font-size: 87px;
+.sec1-intro-title {
+  font-size: 8.7rem;
   font-weight: 700;
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 
-.arya-desc {
+.sec1-desc {
+  max-width: 50ch;
   line-height: 25px;
   font-weight: 400;
   font-size: 17px;
   margin-top: 6px;
   opacity: 0.6;
 }
-.arya-intro-btns {
+.sec1-intro-btns {
   margin-top: 10px;
 }
-.arya-intro-btns :first-child {
+.sec1-intro-btns :first-child {
+  position: relative;
   background-color: #0b2743;
   color: rgba(255, 255, 255, 1);
   border: none;
-  border-radius: 17px;
-  padding: 7px 13px;
+  border-radius: 7rem;
+  padding: 1rem 3rem;
   font-family: "Inter";
   font-size: 14.5px;
   font-weight: 500;
 }
-.arya-intro-btns :nth-child(2) {
+.sec1-intro-btns :nth-child(2) {
+  position: relative;
   background-color: transparent;
   color: #0b2743;
   border: none;
-  border-radius: 17px;
-  padding: 6px 12px;
+  border-radius: 7rem;
+  padding: 1rem 3rem;
   font-family: "Inter";
   font-size: 14.5px;
   font-weight: 500;
 }
-.arya-intro-btns :first-child:hover {
+
+.sec1-btns-hover:hover {
   background-color: rgb(10, 37, 64, 0.5);
   cursor: pointer;
 }
-.arya-intro-btns :nth-child(2):hover {
-  color: rgb(10, 37, 64, 0.5);
-  cursor: pointer;
+
+.sec1-intro-right {
+  /* overflow: hidden; */
+  border-radius: 4rem;
 }
 
-.arya-mob {
-  width: 850px;
-  position: absolute;
-  top: -200px;
-  left: 590px;
+.sec1-mob {
+  width: 29rem;
+  height: 59.5rem;
+  border-radius: 3rem;
 }
+/* section1 ends here */
+/* 
+
+
+*/
+/* section2 starts here */
 .arya-logos {
   margin-top: 100px;
 }
@@ -199,6 +394,12 @@ body {
 .arya-lyft {
   width: 60px;
 }
+/* section2 ends here */
+/* 
+
+
+
+*/
 /* ------------------Cards Section5------------------------------------- */
 .arya-cardsSec {
   font-family: var(--sec3-font-family);
@@ -355,44 +556,6 @@ body {
 
 /*-------------------------   Section   3   ------------------------------------*/
 
-/* utility classes */
-
-.img-it {
-  width: 100%;
-  height: 100%;
-}
-
-.img-it__contain {
-  object-fit: contain;
-}
-
-.img-it__fill {
-  object-fit: fill;
-}
-
-.img-it__cover {
-  object-fit: cover;
-}
-
-.contain-it {
-  width: fit-content;
-  height: fit-content;
-}
-
-.radius-it {
-  border-radius: 1rem;
-}
-
-.radius-it_3rem {
-  border-radius: 3rem;
-}
-
-.shadow-it {
-  box-shadow: 0px 0px 10px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* utility classes end here */
-
 /* section 3 starts here */
 /* This one for responsiveness */
 .section3 {
@@ -494,18 +657,6 @@ TODO: build the skew frame and deploy it on the buttons
   animation-name: arrow;
   animation-duration: 50ms;
   animation-fill-mode: forwards;
-}
-
-@keyframes arrow {
-  0% {
-    content: ">";
-    transform: translate(-40%);
-  }
-
-  100% {
-    content: "->";
-    transform: translateX(0%);
-  }
 }
 
 /* Contains the grid if images*/
