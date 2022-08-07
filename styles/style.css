@@ -276,6 +276,7 @@ header {
   display: flex;
   flex-direction: row;
   gap: 10rem;
+  overflow: hidden;
 }
 
 .sec1-intro-left {
@@ -373,7 +374,7 @@ header {
 */
 /* section2 starts here */
 .arya-logos {
-  margin-top: 100px;
+  margin-top: 10rem;
 }
 
 .arya-logos-top,
@@ -381,6 +382,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 150px;
   align-items: center;
   margin: 50px 0;
